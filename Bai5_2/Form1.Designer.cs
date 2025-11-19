@@ -40,8 +40,12 @@
             this.L_Warning = new System.Windows.Forms.Label();
             this.Save_bt = new System.Windows.Forms.Button();
             this.Load_bt = new System.Windows.Forms.Button();
+            this.Search_box = new System.Windows.Forms.GroupBox();
+            this.Find_bt = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.TextBox();
             this.Res_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_table)).BeginInit();
+            this.Search_box.SuspendLayout();
             this.SuspendLayout();
             // 
             // L1
@@ -105,9 +109,9 @@
             // Res_box
             // 
             this.Res_box.Controls.Add(this.Data_table);
-            this.Res_box.Location = new System.Drawing.Point(12, 113);
+            this.Res_box.Location = new System.Drawing.Point(12, 172);
             this.Res_box.Name = "Res_box";
-            this.Res_box.Size = new System.Drawing.Size(579, 178);
+            this.Res_box.Size = new System.Drawing.Size(579, 195);
             this.Res_box.TabIndex = 3;
             this.Res_box.TabStop = false;
             this.Res_box.Text = "Kết quả";
@@ -115,15 +119,15 @@
             // Data_table
             // 
             this.Data_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data_table.Location = new System.Drawing.Point(7, 20);
+            this.Data_table.Location = new System.Drawing.Point(6, 19);
             this.Data_table.Name = "Data_table";
-            this.Data_table.Size = new System.Drawing.Size(566, 150);
+            this.Data_table.Size = new System.Drawing.Size(566, 170);
             this.Data_table.TabIndex = 0;
             // 
             // L_Warning
             // 
             this.L_Warning.AutoSize = true;
-            this.L_Warning.Location = new System.Drawing.Point(16, 294);
+            this.L_Warning.Location = new System.Drawing.Point(15, 370);
             this.L_Warning.Name = "L_Warning";
             this.L_Warning.Size = new System.Drawing.Size(39, 13);
             this.L_Warning.TabIndex = 4;
@@ -149,11 +153,41 @@
             this.Load_bt.UseVisualStyleBackColor = true;
             this.Load_bt.Click += new System.EventHandler(this.Load_bt_Click);
             // 
+            // Search_box
+            // 
+            this.Search_box.Controls.Add(this.Find_bt);
+            this.Search_box.Controls.Add(this.Search);
+            this.Search_box.Location = new System.Drawing.Point(12, 116);
+            this.Search_box.Name = "Search_box";
+            this.Search_box.Size = new System.Drawing.Size(579, 50);
+            this.Search_box.TabIndex = 7;
+            this.Search_box.TabStop = false;
+            this.Search_box.Text = "Tìm kiếm";
+            // 
+            // Find_bt
+            // 
+            this.Find_bt.Location = new System.Drawing.Point(491, 19);
+            this.Find_bt.Name = "Find_bt";
+            this.Find_bt.Size = new System.Drawing.Size(75, 23);
+            this.Find_bt.TabIndex = 1;
+            this.Find_bt.Text = "Tìm kiếm";
+            this.Find_bt.UseVisualStyleBackColor = true;
+            this.Find_bt.Click += new System.EventHandler(this.Find_bt_Click);
+            // 
+            // Search
+            // 
+            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.Location = new System.Drawing.Point(7, 20);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(478, 21);
+            this.Search.TabIndex = 0;
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 316);
+            this.ClientSize = new System.Drawing.Size(597, 392);
+            this.Controls.Add(this.Search_box);
             this.Controls.Add(this.Load_bt);
             this.Controls.Add(this.Save_bt);
             this.Controls.Add(this.L_Warning);
@@ -169,6 +203,8 @@
             this.Text = "Quản lý học sinh";
             this.Res_box.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Data_table)).EndInit();
+            this.Search_box.ResumeLayout(false);
+            this.Search_box.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +224,9 @@
         private System.Windows.Forms.DataGridView Data_table;
         private System.Windows.Forms.Button Save_bt;
         private System.Windows.Forms.Button Load_bt;
+        private System.Windows.Forms.GroupBox Search_box;
+        private System.Windows.Forms.Button Find_bt;
+        private System.Windows.Forms.TextBox Search;
     }
 }
 

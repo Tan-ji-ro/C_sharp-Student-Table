@@ -164,5 +164,12 @@ namespace Bai5_2
                 }
             }
         }
+
+        private void Find_bt_Click(object sender, EventArgs e)
+        {
+            String result = Search.Text;
+            List<Table_display> result_list = Table.Where(item => item.Name.Contains(result)).ToList();
+            Data_table.DataSource = result_list;
+        }
     }
 }
