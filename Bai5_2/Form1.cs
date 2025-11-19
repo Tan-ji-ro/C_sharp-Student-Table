@@ -165,13 +165,6 @@ namespace Bai5_2
             }
         }
 
-        private void Find_bt_Click(object sender, EventArgs e)
-        {
-            String result = Search.Text;
-            List<Table_display> result_list = Table.Where(item => item.Name.Contains(result)).ToList();
-            Data_table.DataSource = result_list;
-        }
-
         private void Del_bt_Click(object sender, EventArgs e)
         {
             if (Data_table.SelectedRows.Count > 0)
@@ -185,6 +178,21 @@ namespace Bai5_2
             }
             else {
                 L_Warning.Text = "Bạn cần chọn 1 hàng để xóa";
+            }
+        }
+
+        private void Search_TextChanged(object sender, EventArgs e)
+        {
+            String result = Search.Text;
+
+            if (string.IsNullOrWhiteSpace(result))
+            {
+                Data_table.DataSource = Table;
+            }
+            else
+            {
+                List<Table_display> result_list = Table.Where(item => item.Name.Contains(result)).ToList();
+                Data_table.DataSource = result_list;
             }
         }
 

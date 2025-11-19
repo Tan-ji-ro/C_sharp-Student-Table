@@ -41,7 +41,6 @@
             this.Save_bt = new System.Windows.Forms.Button();
             this.Load_bt = new System.Windows.Forms.Button();
             this.Search_box = new System.Windows.Forms.GroupBox();
-            this.Find_bt = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.TextBox();
             this.Del_bt = new System.Windows.Forms.Button();
             this.Res_box.SuspendLayout();
@@ -156,7 +155,6 @@
             // 
             // Search_box
             // 
-            this.Search_box.Controls.Add(this.Find_bt);
             this.Search_box.Controls.Add(this.Search);
             this.Search_box.Location = new System.Drawing.Point(12, 116);
             this.Search_box.Name = "Search_box";
@@ -165,23 +163,14 @@
             this.Search_box.TabStop = false;
             this.Search_box.Text = "Tìm kiếm";
             // 
-            // Find_bt
-            // 
-            this.Find_bt.Location = new System.Drawing.Point(491, 19);
-            this.Find_bt.Name = "Find_bt";
-            this.Find_bt.Size = new System.Drawing.Size(75, 23);
-            this.Find_bt.TabIndex = 1;
-            this.Find_bt.Text = "Tìm kiếm";
-            this.Find_bt.UseVisualStyleBackColor = true;
-            this.Find_bt.Click += new System.EventHandler(this.Find_bt_Click);
-            // 
             // Search
             // 
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.Location = new System.Drawing.Point(7, 20);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(478, 21);
+            this.Search.Size = new System.Drawing.Size(566, 21);
             this.Search.TabIndex = 0;
+            this.Search.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
             // Del_bt
             // 
@@ -237,7 +226,6 @@
         private System.Windows.Forms.Button Save_bt;
         private System.Windows.Forms.Button Load_bt;
         private System.Windows.Forms.GroupBox Search_box;
-        private System.Windows.Forms.Button Find_bt;
         private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.Button Del_bt;
     }
