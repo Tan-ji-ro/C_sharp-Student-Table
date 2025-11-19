@@ -171,5 +171,22 @@ namespace Bai5_2
             List<Table_display> result_list = Table.Where(item => item.Name.Contains(result)).ToList();
             Data_table.DataSource = result_list;
         }
+
+        private void Del_bt_Click(object sender, EventArgs e)
+        {
+            if (Data_table.SelectedRows.Count > 0)
+            {
+                int Selection = Data_table.SelectedRows[0].Index;
+
+                if (Selection >= 0 && Selection < Table.Count)
+                {
+                    Table.RemoveAt(Selection);
+                }
+            }
+            else {
+                L_Warning.Text = "Bạn cần chọn 1 hàng để xóa";
+            }
+        }
+
     }
 }
