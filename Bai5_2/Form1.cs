@@ -196,5 +196,47 @@ namespace Bai5_2
             }
         }
 
+        private void Mod_button_Click(object sender, EventArgs e)
+        {
+            string name_st = Name_box.Text;
+            double point_math, point_litt = 0;
+
+            if (Data_table.SelectedRows.Count > 0)
+            {
+                int Selection = Data_table.SelectedRows[0].Index;
+
+                if (Selection >= 0 && Selection < Table.Count)
+                {
+                    Table_display modified_item = Table[Selection];
+
+                    if (name_st == "")
+                    {
+                        L_Warning.Text = "Lưu ý: Bạn cần phải nhập tên"; // Kiểm tra xem có nhập tên học sinh hay không
+                    }
+
+                    if (!double.TryParse(Math_box.Text, out point_math) || !double.TryParse(Lit_box.Text, out point_litt)) // Kiểm tra xem có chữ trong phần nhập điểm hay không
+                    {
+                        L_Warning.Text = "Lưu ý: Bạn cần phải nhập kiểu số trong 2 vùng nhập điểm";
+                    }
+
+                    if (point_math < 0 || point_math > 10 || point_litt < 0 || point_litt > 10) // Kiểm tra xem điểm đã nhập trong phạm vi 0-10 hay không.
+                    {
+                        L_Warning.Text = "Lưu ý: Vượt quá tầm kiểm tra";
+                    }
+
+                    modified_item.Name = name_st;
+                    modified_item.Point_math = point_math;
+                    modified_item.Point_literature = point_litt;
+                    modified_item.Point_average = (point_math + point_litt) / 2;
+
+                    Table.ResetItem(Selection);
+                }
+            }
+            else
+            {
+                L_Warning.Text = "Bạn cần chọn 1 hàng để chỉnh sửa";
+            }
+        }
+
     }
 }

@@ -43,6 +43,7 @@
             this.Search_box = new System.Windows.Forms.GroupBox();
             this.Search = new System.Windows.Forms.TextBox();
             this.Del_bt = new System.Windows.Forms.Button();
+            this.Mod_button = new System.Windows.Forms.Button();
             this.Res_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_table)).BeginInit();
             this.Search_box.SuspendLayout();
@@ -51,7 +52,7 @@
             // L1
             // 
             this.L1.AutoSize = true;
-            this.L1.Location = new System.Drawing.Point(109, 10);
+            this.L1.Location = new System.Drawing.Point(51, 11);
             this.L1.Name = "L1";
             this.L1.Size = new System.Drawing.Size(69, 13);
             this.L1.TabIndex = 0;
@@ -59,15 +60,15 @@
             // 
             // Name_box
             // 
-            this.Name_box.Location = new System.Drawing.Point(184, 7);
+            this.Name_box.Location = new System.Drawing.Point(126, 8);
             this.Name_box.Name = "Name_box";
-            this.Name_box.Size = new System.Drawing.Size(347, 20);
+            this.Name_box.Size = new System.Drawing.Size(400, 20);
             this.Name_box.TabIndex = 1;
             // 
             // L2
             // 
             this.L2.AutoSize = true;
-            this.L2.Location = new System.Drawing.Point(109, 36);
+            this.L2.Location = new System.Drawing.Point(51, 37);
             this.L2.Name = "L2";
             this.L2.Size = new System.Drawing.Size(59, 13);
             this.L2.TabIndex = 0;
@@ -75,15 +76,15 @@
             // 
             // Math_box
             // 
-            this.Math_box.Location = new System.Drawing.Point(184, 33);
+            this.Math_box.Location = new System.Drawing.Point(126, 34);
             this.Math_box.Name = "Math_box";
-            this.Math_box.Size = new System.Drawing.Size(347, 20);
+            this.Math_box.Size = new System.Drawing.Size(400, 20);
             this.Math_box.TabIndex = 1;
             // 
             // L3
             // 
             this.L3.AutoSize = true;
-            this.L3.Location = new System.Drawing.Point(109, 62);
+            this.L3.Location = new System.Drawing.Point(51, 63);
             this.L3.Name = "L3";
             this.L3.Size = new System.Drawing.Size(53, 13);
             this.L3.TabIndex = 0;
@@ -91,14 +92,14 @@
             // 
             // Lit_box
             // 
-            this.Lit_box.Location = new System.Drawing.Point(184, 59);
+            this.Lit_box.Location = new System.Drawing.Point(126, 56);
             this.Lit_box.Name = "Lit_box";
-            this.Lit_box.Size = new System.Drawing.Size(347, 20);
+            this.Lit_box.Size = new System.Drawing.Size(400, 20);
             this.Lit_box.TabIndex = 1;
             // 
             // Add_button
             // 
-            this.Add_button.Location = new System.Drawing.Point(184, 85);
+            this.Add_button.Location = new System.Drawing.Point(126, 86);
             this.Add_button.Name = "Add_button";
             this.Add_button.Size = new System.Drawing.Size(75, 23);
             this.Add_button.TabIndex = 2;
@@ -135,7 +136,7 @@
             // 
             // Save_bt
             // 
-            this.Save_bt.Location = new System.Drawing.Point(265, 85);
+            this.Save_bt.Location = new System.Drawing.Point(207, 86);
             this.Save_bt.Name = "Save_bt";
             this.Save_bt.Size = new System.Drawing.Size(75, 23);
             this.Save_bt.TabIndex = 5;
@@ -145,7 +146,7 @@
             // 
             // Load_bt
             // 
-            this.Load_bt.Location = new System.Drawing.Point(346, 86);
+            this.Load_bt.Location = new System.Drawing.Point(288, 87);
             this.Load_bt.Name = "Load_bt";
             this.Load_bt.Size = new System.Drawing.Size(75, 23);
             this.Load_bt.TabIndex = 6;
@@ -174,7 +175,7 @@
             // 
             // Del_bt
             // 
-            this.Del_bt.Location = new System.Drawing.Point(427, 86);
+            this.Del_bt.Location = new System.Drawing.Point(369, 87);
             this.Del_bt.Name = "Del_bt";
             this.Del_bt.Size = new System.Drawing.Size(75, 23);
             this.Del_bt.TabIndex = 8;
@@ -182,11 +183,22 @@
             this.Del_bt.UseVisualStyleBackColor = true;
             this.Del_bt.Click += new System.EventHandler(this.Del_bt_Click);
             // 
+            // Mod_button
+            // 
+            this.Mod_button.Location = new System.Drawing.Point(451, 87);
+            this.Mod_button.Name = "Mod_button";
+            this.Mod_button.Size = new System.Drawing.Size(75, 23);
+            this.Mod_button.TabIndex = 9;
+            this.Mod_button.Text = "Sửa";
+            this.Mod_button.UseVisualStyleBackColor = true;
+            this.Mod_button.Click += new System.EventHandler(this.Mod_button_Click);
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 392);
+            this.Controls.Add(this.Mod_button);
             this.Controls.Add(this.Del_bt);
             this.Controls.Add(this.Search_box);
             this.Controls.Add(this.Load_bt);
@@ -228,6 +240,7 @@
         private System.Windows.Forms.GroupBox Search_box;
         private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.Button Del_bt;
+        private System.Windows.Forms.Button Mod_button;
     }
 }
 
