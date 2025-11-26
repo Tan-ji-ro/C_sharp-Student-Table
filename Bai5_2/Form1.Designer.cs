@@ -119,6 +119,7 @@
             // 
             // Data_table
             // 
+            this.Data_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_table.Location = new System.Drawing.Point(6, 19);
             this.Data_table.Name = "Data_table";

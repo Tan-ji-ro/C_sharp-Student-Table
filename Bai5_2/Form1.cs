@@ -171,10 +171,8 @@ namespace Bai5_2
             {
                 int Selection = Data_table.SelectedRows[0].Index;
 
-                if (Selection >= 0 && Selection < Table.Count)
-                {
-                    Table.RemoveAt(Selection);
-                }
+                Table_display Selected = (Table_display)Data_table.Rows[Selection].DataBoundItem;
+                Table.Remove(Selected);
             }
             else {
                 L_Warning.Text = "Bạn cần chọn 1 hàng để xóa";
@@ -191,8 +189,8 @@ namespace Bai5_2
             }
             else
             {
-                List<Table_display> result_list = Table.Where(item => item.Name.Contains(result)).ToList();
-                Data_table.DataSource = result_list;
+                List<Table_display> Filter_table = Table.Where(i => i.Name.Contains(result)).ToList();
+                Data_table.DataSource = Filter_table;
             }
         }
 
@@ -205,9 +203,7 @@ namespace Bai5_2
             {
                 int Selection = Data_table.SelectedRows[0].Index;
 
-                if (Selection >= 0 && Selection < Table.Count)
-                {
-                    Table_display modified_item = Table[Selection];
+                    Table_display modified_item = (Table_display)Data_table.Rows[Selection].DataBoundItem;
 
                     if (name_st == "")
                     {
@@ -230,7 +226,6 @@ namespace Bai5_2
                     modified_item.Point_average = (point_math + point_litt) / 2;
 
                     Table.ResetItem(Selection);
-                }
             }
             else
             {
