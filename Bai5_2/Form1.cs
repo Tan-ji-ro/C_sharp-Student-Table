@@ -165,45 +165,49 @@ namespace Bai5_2
             }
         }
 
+        // Xóa thông tin theo hàng
         private void Del_bt_Click(object sender, EventArgs e)
         {
-            if (Data_table.SelectedRows.Count > 0)
+            if (Data_table.SelectedRows.Count > 0) // Xác định hàng để xóa
             {
                 int Selection = Data_table.SelectedRows[0].Index;
 
-                Table_display Selected = (Table_display)Data_table.Rows[Selection].DataBoundItem;
-                Table.Remove(Selected);
+                Table_display Selected = (Table_display)Data_table.Rows[Selection].DataBoundItem; // Gán dữ liệu cần xóa vào biến riêng
+                Table.Remove(Selected); // Xóa dữ liệu theo hàng 
             }
             else {
                 L_Warning.Text = "Bạn cần chọn 1 hàng để xóa";
             }
         }
 
+        // Tìm dữ liệu
         private void Search_TextChanged(object sender, EventArgs e)
         {
             String result = Search.Text;
 
             if (string.IsNullOrWhiteSpace(result))
             {
-                Data_table.DataSource = Table;
+                Data_table.DataSource = Table; // Khoảng không = toàn bộ bảng
             }
             else
             {
-                List<Table_display> Filter_table = Table.Where(i => i.Name.Contains(result)).ToList();
+                List<Table_display> Filter_table = Table.Where(i => i.Name.Contains(result)).ToList(); // Lọc dữ liệu và gán vào một danh sách mới do BindingList ko hỗ trợ lọc trực tiếp
                 Data_table.DataSource = Filter_table;
             }
         }
 
+        // Sửa thông tin theo hàng 
         private void Mod_button_Click(object sender, EventArgs e)
         {
+            // Thiết lập biến để sửa
             string name_st = Name_box.Text;
             double point_math, point_litt = 0;
 
-            if (Data_table.SelectedRows.Count > 0)
+            if (Data_table.SelectedRows.Count > 0) // Xác định hàng để xóa
             {
                 int Selection = Data_table.SelectedRows[0].Index;
 
-                    Table_display modified_item = (Table_display)Data_table.Rows[Selection].DataBoundItem;
+                Table_display modified_item = (Table_display)Data_table.Rows[Selection].DataBoundItem; // Gán dữ liệu cần sửa vào biến riêng
 
                     if (name_st == "")
                     {
@@ -220,11 +224,13 @@ namespace Bai5_2
                         L_Warning.Text = "Lưu ý: Vượt quá tầm kiểm tra";
                     }
 
+                    // Ghi thông tin đã sửa vào dữ liệu
                     modified_item.Name = name_st;
                     modified_item.Point_math = point_math;
                     modified_item.Point_literature = point_litt;
                     modified_item.Point_average = (point_math + point_litt) / 2;
 
+                    // Thiết lập lại dữ liệu
                     Table.ResetItem(Selection);
             }
             else
