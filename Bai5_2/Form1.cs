@@ -238,6 +238,5 @@ namespace Bai5_2
                 L_Warning.Text = "Bạn cần chọn 1 hàng để chỉnh sửa";
             }
         }
-
     }
 }

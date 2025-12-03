@@ -51,6 +51,9 @@
             // 
             // L1
             // 
+            this.L1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.L1.AutoSize = true;
             this.L1.Location = new System.Drawing.Point(51, 11);
             this.L1.Name = "L1";
@@ -60,6 +63,9 @@
             // 
             // Name_box
             // 
+            this.Name_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Name_box.Location = new System.Drawing.Point(126, 8);
             this.Name_box.Name = "Name_box";
             this.Name_box.Size = new System.Drawing.Size(400, 20);
@@ -67,6 +73,9 @@
             // 
             // L2
             // 
+            this.L2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.L2.AutoSize = true;
             this.L2.Location = new System.Drawing.Point(51, 37);
             this.L2.Name = "L2";
@@ -76,6 +85,9 @@
             // 
             // Math_box
             // 
+            this.Math_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Math_box.Location = new System.Drawing.Point(126, 34);
             this.Math_box.Name = "Math_box";
             this.Math_box.Size = new System.Drawing.Size(400, 20);
@@ -83,6 +95,9 @@
             // 
             // L3
             // 
+            this.L3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.L3.AutoSize = true;
             this.L3.Location = new System.Drawing.Point(51, 63);
             this.L3.Name = "L3";
@@ -92,6 +107,9 @@
             // 
             // Lit_box
             // 
+            this.Lit_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Lit_box.Location = new System.Drawing.Point(126, 56);
             this.Lit_box.Name = "Lit_box";
             this.Lit_box.Size = new System.Drawing.Size(400, 20);
@@ -109,6 +127,9 @@
             // 
             // Res_box
             // 
+            this.Res_box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Res_box.Controls.Add(this.Data_table);
             this.Res_box.Location = new System.Drawing.Point(12, 172);
             this.Res_box.Name = "Res_box";
@@ -119,15 +140,20 @@
             // 
             // Data_table
             // 
+            this.Data_table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Data_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Data_table.Location = new System.Drawing.Point(6, 19);
+            this.Data_table.Location = new System.Drawing.Point(6, 13);
             this.Data_table.Name = "Data_table";
-            this.Data_table.Size = new System.Drawing.Size(566, 170);
+            this.Data_table.Size = new System.Drawing.Size(566, 176);
             this.Data_table.TabIndex = 0;
             // 
             // L_Warning
             // 
+            this.L_Warning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.L_Warning.AutoSize = true;
             this.L_Warning.Location = new System.Drawing.Point(15, 370);
             this.L_Warning.Name = "L_Warning";
@@ -157,6 +183,8 @@
             // 
             // Search_box
             // 
+            this.Search_box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Search_box.Controls.Add(this.Search);
             this.Search_box.Location = new System.Drawing.Point(12, 116);
             this.Search_box.Name = "Search_box";
@@ -167,6 +195,9 @@
             // 
             // Search
             // 
+            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.Location = new System.Drawing.Point(7, 20);
             this.Search.Name = "Search";
