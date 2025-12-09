@@ -44,6 +44,7 @@
             this.Search = new System.Windows.Forms.TextBox();
             this.Del_bt = new System.Windows.Forms.Button();
             this.Mod_button = new System.Windows.Forms.Button();
+            this.Exit_button = new System.Windows.Forms.Button();
             this.Res_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_table)).BeginInit();
             this.Search_box.SuspendLayout();
@@ -68,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Name_box.Location = new System.Drawing.Point(126, 8);
             this.Name_box.Name = "Name_box";
-            this.Name_box.Size = new System.Drawing.Size(400, 20);
+            this.Name_box.Size = new System.Drawing.Size(483, 20);
             this.Name_box.TabIndex = 1;
             // 
             // L2
@@ -90,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Math_box.Location = new System.Drawing.Point(126, 34);
             this.Math_box.Name = "Math_box";
-            this.Math_box.Size = new System.Drawing.Size(400, 20);
+            this.Math_box.Size = new System.Drawing.Size(483, 20);
             this.Math_box.TabIndex = 1;
             // 
             // L3
@@ -112,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lit_box.Location = new System.Drawing.Point(126, 56);
             this.Lit_box.Name = "Lit_box";
-            this.Lit_box.Size = new System.Drawing.Size(400, 20);
+            this.Lit_box.Size = new System.Drawing.Size(483, 20);
             this.Lit_box.TabIndex = 1;
             // 
             // Add_button
@@ -133,7 +134,7 @@
             this.Res_box.Controls.Add(this.Data_table);
             this.Res_box.Location = new System.Drawing.Point(12, 172);
             this.Res_box.Name = "Res_box";
-            this.Res_box.Size = new System.Drawing.Size(579, 195);
+            this.Res_box.Size = new System.Drawing.Size(662, 195);
             this.Res_box.TabIndex = 3;
             this.Res_box.TabStop = false;
             this.Res_box.Text = "Kết quả";
@@ -147,7 +148,7 @@
             this.Data_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_table.Location = new System.Drawing.Point(6, 13);
             this.Data_table.Name = "Data_table";
-            this.Data_table.Size = new System.Drawing.Size(566, 176);
+            this.Data_table.Size = new System.Drawing.Size(649, 176);
             this.Data_table.TabIndex = 0;
             // 
             // L_Warning
@@ -188,7 +189,7 @@
             this.Search_box.Controls.Add(this.Search);
             this.Search_box.Location = new System.Drawing.Point(12, 116);
             this.Search_box.Name = "Search_box";
-            this.Search_box.Size = new System.Drawing.Size(579, 50);
+            this.Search_box.Size = new System.Drawing.Size(662, 50);
             this.Search_box.TabIndex = 7;
             this.Search_box.TabStop = false;
             this.Search_box.Text = "Tìm kiếm";
@@ -201,7 +202,7 @@
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.Location = new System.Drawing.Point(7, 20);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(566, 21);
+            this.Search.Size = new System.Drawing.Size(649, 21);
             this.Search.TabIndex = 0;
             this.Search.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
@@ -225,11 +226,22 @@
             this.Mod_button.UseVisualStyleBackColor = true;
             this.Mod_button.Click += new System.EventHandler(this.Mod_button_Click);
             // 
+            // Exit_button
+            // 
+            this.Exit_button.Location = new System.Drawing.Point(533, 87);
+            this.Exit_button.Name = "Exit_button";
+            this.Exit_button.Size = new System.Drawing.Size(75, 23);
+            this.Exit_button.TabIndex = 10;
+            this.Exit_button.Text = "Thoát";
+            this.Exit_button.UseVisualStyleBackColor = true;
+            this.Exit_button.Click += new System.EventHandler(this.Exit_button_Click);
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 392);
+            this.ClientSize = new System.Drawing.Size(680, 392);
+            this.Controls.Add(this.Exit_button);
             this.Controls.Add(this.Mod_button);
             this.Controls.Add(this.Del_bt);
             this.Controls.Add(this.Search_box);
@@ -273,6 +285,7 @@
         private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.Button Del_bt;
         private System.Windows.Forms.Button Mod_button;
+        private System.Windows.Forms.Button Exit_button;
     }
 }
 

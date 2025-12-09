@@ -238,5 +238,12 @@ namespace Bai5_2
                 L_Warning.Text = "Bạn cần chọn 1 hàng để chỉnh sửa";
             }
         }
+
+        private void Exit_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login_form lgf = new Login_form();
+            lgf.Show();
+        }
     }
 }
