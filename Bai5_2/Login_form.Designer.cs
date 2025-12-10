@@ -37,6 +37,7 @@
             this.User_box = new System.Windows.Forms.TextBox();
             this.Usertext = new System.Windows.Forms.Label();
             this.W_label = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.Login_group.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +88,7 @@
             this.Change_button.TabIndex = 4;
             this.Change_button.Text = "Đổi mã";
             this.Change_button.UseVisualStyleBackColor = true;
+            this.Change_button.Click += new System.EventHandler(this.Change_button_Click);
             // 
             // Pass_box
             // 
@@ -129,7 +131,7 @@
             // 
             // W_label
             // 
-            this.W_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.W_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.W_label.AutoSize = true;
             this.W_label.Location = new System.Drawing.Point(12, 428);
             this.W_label.Name = "W_label";
@@ -137,11 +139,24 @@
             this.W_label.TabIndex = 1;
             this.W_label.Text = "Cảnh báo";
             // 
+            // Title
+            // 
+            this.Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(15, 13);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(774, 54);
+            this.Title.TabIndex = 2;
+            this.Title.Text = "Chào mừng đến với quản lý học sinh";
+            // 
             // Login_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.W_label);
             this.Controls.Add(this.Login_group);
             this.Name = "Login_form";
@@ -164,5 +179,6 @@
         private System.Windows.Forms.Button Exit_button;
         private System.Windows.Forms.Button Login_button;
         private System.Windows.Forms.Label W_label;
+        private System.Windows.Forms.Label Title;
     }
 }

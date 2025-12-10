@@ -25,6 +25,13 @@ namespace Bai5_2
             Application.Exit();
         }
 
+        private void Change_button_Click(object sender, EventArgs e)
+        {
+            Passchange psc = new Passchange();
+            psc.Show();
+            this.Hide();
+        }
+
         private void Login_button_Click(object sender, EventArgs e)
         {
             String Username = User_box.Text, Password = Pass_box.Text;
